@@ -1,0 +1,95 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/spring'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/spring-plugin'
+        }
+    }
+}
+
+plugins {
+    id 'java-platform'
+    id 'maven-publish'
+}
+
+group = 'cc.xfl12345.mybigdata'
+version = '0.0.1'
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << '-Xlint:unchecked'
+        options.encoding = 'UTF-8'
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    gradlePluginPortal()
+    maven {
+        url 'https://jitpack.io'
+    }
+    maven {
+        url 'https://maven.aliyun.com/repository/central'
+    }
+    maven {
+        url 'https://maven.aliyun.com/repository/public'
+    }
+    maven {
+        url 'https://maven.aliyun.com/repository/spring'
+    }
+    maven {
+        url 'https://maven.aliyun.com/repository/spring-plugin'
+    }
+}
+
+javaPlatform {
+    allowDependencies()
+}
+
+dependencies {
+    def junitVersion = '5.9.0'
+
+    api platform(group: 'org.springframework.boot', name: 'spring-boot-dependencies', version: '2.7.3')
+    constraints {
+        // 注解神器 getter setter toString builder
+        // https://mvnrepository.com/artifact/org.projectlombok/lombok
+        api group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
+        // 模板引擎 Freemarker
+        // https://mvnrepository.com/artifact/org.freemarker/freemarker
+        api group: 'org.freemarker', name: 'freemarker', version: '2.3.31'
+
+
+        // https://mvnrepository.com/artifact/io.swagger/swagger-annotations
+        api group: 'io.swagger', name: 'swagger-annotations', version: '1.6.6'
+
+        api group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitVersion
+        api group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
+    }
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.javaPlatform
+        }
+    }
+}
+
+
