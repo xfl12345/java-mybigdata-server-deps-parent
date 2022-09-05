@@ -69,6 +69,8 @@ dependencies {
     // api platform(group: 'com.alibaba.fastjson2', name: 'fastjson2-parent', version: '2.0.12')
 
     def junitVersion = '5.9.0'
+    def beeOrmSpringBootVersion = '1.11.boot2.6.7'
+    def druidVersion = '1.2.11'
 
     constraints {
         // https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
@@ -99,6 +101,18 @@ dependencies {
 
         // https://mvnrepository.com/artifact/io.swagger/swagger-annotations
         api group: 'io.swagger', name: 'swagger-annotations', version: '1.6.6'
+
+        // https://mvnrepository.com/artifact/org.teasoft/bee-spring-boot
+        api group: 'org.teasoft', name: 'bee-spring-boot', version: beeOrmSpringBootVersion
+
+        // https://mvnrepository.com/artifact/org.teasoft/bee-spring-boot-starter
+        api group: 'org.teasoft', name: 'bee-spring-boot-starter', version: beeOrmSpringBootVersion
+
+        // https://mvnrepository.com/artifact/com.alibaba/druid
+        api group: 'com.alibaba', name: 'druid', version: druidVersion
+
+        // https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter
+        api group: 'com.alibaba', name: 'druid-spring-boot-starter', version: druidVersion
 
         api group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitVersion
         api group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
