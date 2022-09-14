@@ -70,6 +70,7 @@ dependencies {
 
     def beeOrmSpringBootVersion = '1.11.boot2.6.7'
     def druidVersion = '1.2.11'
+    def myPlatformVersion = getProject().getVersion()
 
     constraints {
         // JSON support
@@ -98,6 +99,11 @@ dependencies {
 
         // https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter
         api group: 'com.alibaba', name: 'druid-spring-boot-starter', version: druidVersion
+
+        api group: 'cc.xfl12345.mybigdata', name: 'server-common', version: myPlatformVersion
+        api group: 'cc.xfl12345.mybigdata', name: 'server-mysql', version: myPlatformVersion
+        api group: 'cc.xfl12345.mybigdata', name: 'server-mysql-spring-boot-starter', version: myPlatformVersion
+        api group: 'cc.xfl12345.mybigdata', name: 'server-web', version: myPlatformVersion
     }
 }
 
