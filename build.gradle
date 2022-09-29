@@ -31,7 +31,7 @@ javaPlatform {
 }
 
 group = 'cc.xfl12345.mybigdata'
-version = '0.0.1'
+version = '0.0.2'
 
 repositories {
     mavenLocal()
@@ -56,13 +56,13 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies
-    api platform(group: 'org.springframework.boot', name: 'spring-boot-dependencies', version: '2.7.3')
+    api platform(group: 'org.springframework.boot', name: 'spring-boot-dependencies', version: '2.7.4')
 
     // // https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2-parent
     // api platform(group: 'com.alibaba.fastjson2', name: 'fastjson2-parent', version: '2.0.12')
 
     String beeOrmSpringBootVersion = '1.17.boot2.7.3'
-    String druidVersion = '1.2.11'
+    String druidVersion = '1.2.12'
     String myPlatformVersion = getProject().getVersion()
 
     constraints {
