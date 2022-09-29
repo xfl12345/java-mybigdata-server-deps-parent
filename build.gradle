@@ -31,7 +31,7 @@ javaPlatform {
 }
 
 group = 'cc.xfl12345.mybigdata'
-version = '0.0.2'
+version = '0.0.3'
 
 repositories {
     mavenLocal()
@@ -63,7 +63,7 @@ dependencies {
 
     String beeOrmSpringBootVersion = '1.17.boot2.7.3'
     String druidVersion = '1.2.12'
-    String myPlatformVersion = getProject().getVersion()
+    // String myPlatformVersion = getProject().getVersion()
 
     constraints {
         // JSON support
@@ -93,10 +93,10 @@ dependencies {
         // https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter
         api group: 'com.alibaba', name: 'druid-spring-boot-starter', version: druidVersion
 
-        api group: 'cc.xfl12345.mybigdata', name: 'server-common', version: myPlatformVersion
-        api group: 'cc.xfl12345.mybigdata', name: 'server-mysql', version: myPlatformVersion
-        api group: 'cc.xfl12345.mybigdata', name: 'server-mysql-spring-boot-starter', version: myPlatformVersion
-        api group: 'cc.xfl12345.mybigdata', name: 'server-web', version: myPlatformVersion
+        // api group: 'cc.xfl12345.mybigdata', name: 'server-common', version: myPlatformVersion
+        // api group: 'cc.xfl12345.mybigdata', name: 'server-mysql', version: myPlatformVersion
+        // api group: 'cc.xfl12345.mybigdata', name: 'server-mysql-spring-boot-starter', version: myPlatformVersion
+        // api group: 'cc.xfl12345.mybigdata', name: 'server-web', version: myPlatformVersion
     }
 }
 
