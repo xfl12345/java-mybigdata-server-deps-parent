@@ -8,7 +8,7 @@ javaPlatform {
 }
 
 group = 'cc.xfl12345.mybigdata'
-version = '0.0.3'
+version = '0.0.4'
 
 repositories {
     mavenLocal()
@@ -39,13 +39,13 @@ dependencies {
     // api platform(group: 'com.alibaba.fastjson2', name: 'fastjson2-parent', version: '2.0.12')
 
     String beeOrmSpringBootVersion = '1.17.boot2.7.3'
-    String druidVersion = '1.2.12'
+    String druidVersion = '1.2.13'
     // String myPlatformVersion = getProject().getVersion()
 
     constraints {
         // JSON support
         // https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2
-        api group: 'com.alibaba.fastjson2', name: 'fastjson2', version: '2.0.14'
+        api group: 'com.alibaba.fastjson2', name: 'fastjson2', version: '2.0.15'
 
         // 字符串风格转换工具
         // https://mvnrepository.com/artifact/com.shekhargulati/strman
@@ -56,7 +56,7 @@ dependencies {
         api group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: '4.0.1'
 
         // https://mvnrepository.com/artifact/io.swagger/swagger-annotations
-        api group: 'io.swagger', name: 'swagger-annotations', version: '1.6.6'
+        api group: 'io.swagger', name: 'swagger-annotations', version: '1.6.8'
 
         // https://mvnrepository.com/artifact/org.teasoft/bee-spring-boot
         api group: 'org.teasoft', name: 'bee-spring-boot', version: beeOrmSpringBootVersion
